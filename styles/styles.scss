@@ -358,13 +358,13 @@ main {
             position: relative;
             text-decoration: line-through darkred;
             transition: 0.3s all;
-            font-size: 1.4rem;
+            font-size: 2rem;
             margin: 0.5rem 0;
             &:before {
                 content: '';
                 font-family: 'Kalam', cursive;
                 position: absolute;
-                left: -1rem;
+                left: -1.5rem;
                 top: -0.1rem;
                 color: darkred;
                 transition: 0.3s all;
@@ -388,6 +388,7 @@ main {
             transition: 0.3s all;
             font-size: 2rem;
             margin: 2rem 0;
+            cursor: pointer;
 
             &:hover{
                 transform: rotate(-2deg) scale(1.1);
