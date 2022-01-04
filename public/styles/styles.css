@@ -57,6 +57,25 @@
 
 p {
   margin: 0;
+  font-size: 1.5rem;
+}
+
+button, .button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  transform: rotate(-1deg);
+  padding: 0.5rem;
+  transition: 0.3s all;
+  font-size: 2rem;
+  margin: 2rem 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover, .button:hover {
+  transform: rotate(-2deg) scale(1.1);
 }
 
 body {
@@ -249,17 +268,49 @@ main {
 
 #banner2 a {
   color: #e7dab8;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.5rem;
-  background-color: #000;
-  border-radius: 0.25rem;
   transition: 0.3s all;
 }
 
 #banner2 a:hover {
   transform: scale(1.1);
+}
+
+#photos2 {
+  display: flex;
+  align-items: center;
+}
+
+#photos2 .photo {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5), inset 0.5rem 1rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.4rem 0.3rem 0.25rem 0.3rem;
+  margin-top: -1rem;
+}
+
+#photos2 .photo:first-child {
+  transform: rotate(-2deg);
+}
+
+#photos2 .photo:nth-child(2) {
+  transform: rotate(1deg);
+}
+
+#photos2 .photo img {
+  width: 100%;
+  display: block;
+}
+
+#photo3 {
+  background: url("../img/oldpaper2.jpg") no-repeat;
+  padding: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5), inset 0.5rem 1rem 1rem rgba(0, 0, 0, 0.15);
+  transform: rotate(-2deg);
+  border-radius: 0.4rem 0.3rem 0.25rem 0.3rem;
+  margin-top: -1rem;
+}
+
+#photo3 img {
+  width: 100%;
+  display: block;
 }
 
 #banner3 {
@@ -268,6 +319,7 @@ main {
   padding: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+  transform: rotate(-4deg);
 }
 
 #banner3 article {
@@ -299,7 +351,21 @@ main {
   height: 4rem;
 }
 
+#photo4 {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5), inset 0.5rem 1rem 1rem rgba(0, 0, 0, 0.15);
+  transform: rotate(-2deg);
+  border-radius: 0.4rem 0.3rem 0.25rem 0.3rem;
+  margin-top: 2rem;
+  margin-bottom: -10rem;
+}
+
+#photo4 img {
+  width: 100%;
+  display: block;
+}
+
 #form {
+  position: relative;
   margin: 2rem 3rem 0;
   background: url("../img/oldpaper1.jpg") bottom left no-repeat;
   padding: 0.5rem;
@@ -325,7 +391,9 @@ main {
   margin-bottom: 1rem;
 }
 
-#form form input[type="text"] {
+#form form input[type="text"],
+#form form input[type="tel"],
+#form form input[type="email"] {
   border: none;
   background: none;
   color: darkred;
@@ -369,19 +437,134 @@ main {
 }
 
 #form form button {
-  background-color: #000;
   color: #e7dab8;
-  border: none;
-  border-radius: 0.25rem;
-  transform: rotate(-1deg);
-  padding: 0.5rem;
-  transition: 0.3s all;
-  font-size: 2rem;
-  margin: 2rem 0;
-  cursor: pointer;
 }
 
-#form form button:hover {
-  transform: rotate(-2deg) scale(1.1);
+#banner4 {
+  margin: 4rem 3rem 5rem;
+  background: url("../img/oldpaper1.jpg") top right no-repeat;
+  padding: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+  transform: rotate(3deg);
+}
+
+#banner4 img {
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  margin-top: -3rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  object-position: top;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+#banner4 article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  border: 0.2rem solid #000;
+}
+
+#banner4 article h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+footer {
+  display: block;
+  padding: 10rem;
+}
+
+#dialogContainer {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#dialogContainer.hide {
+  display: none;
+}
+
+#dialogContainer.fadeIn {
+  animation: fadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#dialogContainer.fadeOut {
+  animation: fadeOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#dialogContainer #dialog {
+  margin: 2rem 3rem 0;
+  background: url("../img/oldpaper2.jpg") top right no-repeat;
+  padding: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem 0.2rem 0.7rem 0.2rem;
+}
+
+#dialogContainer #dialog article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: 0.2rem solid #000;
+}
+
+#dialogContainer #dialog article h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+#dialogContainer #dialog article p {
+  font-size: 1.4rem;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    display: flex;
+    backdrop-filter: blur(1rem) saturate(0.5);
+  }
+  99% {
+    opacity: 0;
+    display: flex;
+    backdrop-filter: blur(0) saturate(1);
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+    display: flex;
+    backdrop-filter: blur(0) saturate(1);
+  }
+  100% {
+    opacity: 1;
+    backdrop-filter: blur(1rem) saturate(0.5);
+    display: flex;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

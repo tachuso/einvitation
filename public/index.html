@@ -72,9 +72,20 @@
 
             <br>
             <hr>
-            <a href="https://www.google.com/maps/place/Club+Judicial/@-33.6754041,-65.5028047,991m/data=!3m1!1e3!4m5!3m4!1s0x95d141014860676f:0xf90067caf0e5a415!8m2!3d-33.6748095!4d-65.5027539"  target="_blank" class="uppercase">Ver ubicación en Google Maps</a>
+            <a class="button" href="https://www.google.com/maps/place/Club+Judicial/@-33.6754041,-65.5028047,991m/data=!3m1!1e3!4m5!3m4!1s0x95d141014860676f:0xf90067caf0e5a415!8m2!3d-33.6748095!4d-65.5027539"
+                target="_blank" class="uppercase">Ver ubicación en Google Maps</a>
             <hr>
         </section>
+        <section id="photos2">
+            <article class="photo">
+                <img src="img/omar1.jpg" alt="">
+            </article>
+            <article class="photo">
+                <img src="img/omar2.jpg" alt="">
+            </article>
+            
+        </section>
+        
         <section id="banner3">
             <article>
                 <h1 class="imbue uppercase letter-spacing-1 w900">- Importante -</h1>
@@ -92,39 +103,75 @@
             </article>
 
         </section>
-
+        <section id="photo4">
+            <img src="img/omar5.jpg" alt="">
+        </section>
         <section id="form">
             <article>
                 <h1 class="imbue uppercase letter-spacing-1 w900">★ Confirmá Asistencia ★</h1>
                 <br>
-                <form action="javascript:void(0)">
+                <form action="">
                     <label class="imbue uppercase" for="lastname">Apellido/s:</label>
-                    
                     <input class="hand" type="text" id="lastname" name="lastname" placeholder="ejemplo: Angio">
-                    
+
                     <label class="imbue uppercase" for="firstname">Nombre/s:</label>
-                    
                     <input class="hand" type="text" id="firstname" name="firstname" placeholder="ejemplo: Eduardo Omar">
-                    
+
+                    <label class="imbue uppercase" for="email">Email:</label>
+                    <input class="hand" type="email" id="email" name="email" placeholder="ejemplo: omar@box.app">
+
+                    <label class="imbue uppercase" for="phone">Teléfono:</label>
+                    <input class="hand" type="tel" id="phone" name="phone" placeholder="ejemplo: 2657505133">
+
                     <p class="imbue uppercase">Esquema de Vacunación COVID:</p>
                     <input type="radio" name="dosis" id="dosis0" value="0">
                     <label for="dosis0">Sin vacuna COVID</label>
-                    
+
                     <input type="radio" name="dosis" id="dosis1" value="1">
                     <label for="dosis1">1 dosis</label>
-                    
+
                     <input type="radio" name="dosis" id="dosis2" value="2" checked>
                     <label for="dosis2">2 dosis</label>
-                    
+
                     <input type="radio" name="dosis" id="dosis3" value="3">
                     <label for="dosis3">3 dosis</label>
-                    
+
                     <button class="bsd uppercase w900">REGISTRARME</button>
                 </form>
             </article>
 
         </section>
+
+        <section id="banner4">
+            
+            <article>
+                <img src="img/omar4.jpg" alt="">
+                <h1 class="imbue uppercase letter-spacing-1 w900">¿ Dudas ?</h1>
+                <br>
+                <p class="imbue uppercase w500 center">Estamos a un Whatsapp de distancia. ¡Escribime!</p>
+                <a href="https://wa.link/s5f1sr" class="button" >Contactar por WhatsApp</a>
+            </article>
+
+        </section>
+        <footer></footer>
+
+
     </main>
+
+    <section id="dialogContainer" class="hide">
+        <section id="dialog">
+            <article>
+                <h1 class="imbue uppercase letter-spacing-1 w900"></h1>
+                <br>
+                <p class="imbue uppercase w500 center"></p>
+                <button class="bsd uppercase w900">OK</button>
+            </article>
+        </section>
+        
+    </section>
+
+
+    <script src="app.js"></script>
 </body>
 
 </html>

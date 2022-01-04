@@ -39,14 +39,14 @@ module.exports.addGuest = (req, res) => {
       email: req.body.email || null,
       phone: req.body.phone || null,
       name: {
-        first: req.body.address?.city || null,
-        last: req.body.address?.street || null,
+        first: req.body.name?.first || null,
+        last: req.body.name?.last || null,
       },
       vaccine: req.body.vaccine || null,
     })
     guest.save()
-      .then(guest => res.json(guest))
-      .catch(err => res.json(err))
+      .then(guest => res.status(201).json(guest))
+      .catch(err => res.status(500).json(err))
 
     //res.json({id:Guest.find().count()+1,...req.body})
   }

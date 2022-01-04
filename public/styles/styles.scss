@@ -59,6 +59,25 @@
 
 p {
     margin: 0;
+    font-size: 1.5rem;
+}
+
+button, .button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    transform: rotate(-1deg);
+    padding: 0.5rem;
+    transition: 0.3s all;
+    font-size: 2rem;
+    margin: 2rem 0;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        transform: rotate(-2deg) scale(1.1);
+    }
 }
 
 body {
@@ -165,6 +184,7 @@ main {
             >span {
                 font-weight: 700;
             }
+
             s {
                 text-decoration: line-through darkred;
             }
@@ -263,12 +283,6 @@ main {
 
     a {
         color: #e7dab8;
-        padding: 0.5rem 1rem;
-        text-align: center;
-        text-decoration: none;
-        font-size: 1.5rem;
-        background-color: #000;
-        border-radius: 0.25rem;
         transition: 0.3s all;
 
         &:hover {
@@ -277,12 +291,49 @@ main {
     }
 }
 
+
+#photos2{
+    display: flex;
+    align-items: center;
+    .photo {
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5), inset 0.5rem 1rem 1rem rgba(0, 0, 0, 0.15);
+        
+        border-radius: 0.4rem 0.3rem 0.25rem 0.3rem;
+        margin-top: -1rem;
+
+        &:first-child{
+            transform: rotate(-2deg);
+        }
+        &:nth-child(2){
+            transform: rotate(1deg);
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+#photo3 {
+    background: url('../img/oldpaper2.jpg') no-repeat;
+    padding: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5), inset 0.5rem 1rem 1rem rgba(0, 0, 0, 0.15);
+    transform: rotate(-2deg);
+    border-radius: 0.4rem 0.3rem 0.25rem 0.3rem;
+    margin-top: -1rem;
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
 #banner3 {
     margin: 2rem 3rem 0;
     background: url('../img/oldpaper1.jpg') top right no-repeat;
     padding: 0.5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+    transform: rotate(-4deg);
 
     article {
         display: flex;
@@ -315,7 +366,19 @@ main {
 
 }
 
+#photo4 {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5), inset 0.5rem 1rem 1rem rgba(0, 0, 0, 0.15);
+    transform: rotate(-2deg);
+    border-radius: 0.4rem 0.3rem 0.25rem 0.3rem;
+    margin-top: 2rem;
+    margin-bottom: -10rem;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
 #form {
+    position: relative;
     margin: 2rem 3rem 0;
     background: url('../img/oldpaper1.jpg') bottom left no-repeat;
     padding: 0.5rem;
@@ -324,20 +387,26 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     article {
         h1 {
             font-size: 2rem;
         }
     }
+
     form {
         font-size: 1.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+
         label {
             margin-bottom: 1rem;
         }
-        input[type="text"] {
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"] {
             border: none;
             background: none;
             color: darkred;
@@ -352,47 +421,177 @@ main {
 
         input[type="radio"] {
             display: none;
-        }
 
-        input[type="radio"]+label{
-            position: relative;
-            text-decoration: line-through darkred;
-            transition: 0.3s all;
-            font-size: 2rem;
-            margin: 0.5rem 0;
-            &:before {
-                content: '';
-                font-family: 'Kalam', cursive;
-                position: absolute;
-                left: -1.5rem;
-                top: -0.1rem;
-                color: darkred;
+            &+label {
+                position: relative;
+                text-decoration: line-through darkred;
                 transition: 0.3s all;
-            }
-        }
-        input[type="radio"]:checked+label{
-            text-decoration-color: transparent;
-            &:before {
-                content: 'X';
-                
+                font-size: 2rem;
+                margin: 0.5rem 0;
+
+                &:before {
+                    content: '';
+                    font-family: 'Kalam', cursive;
+                    position: absolute;
+                    left: -1.5rem;
+                    top: -0.1rem;
+                    color: darkred;
+                    transition: 0.3s all;
+                }
             }
 
+            &:checked+label {
+                text-decoration-color: transparent;
+
+                &:before {
+                    content: 'X';
+
+                }
+
+            }
         }
+
         button {
-            background-color: #000;
             color: #e7dab8;
-            border: none;
-            border-radius: 0.25rem;
-            transform: rotate(-1deg);
-            padding: 0.5rem;
-            transition: 0.3s all;
-            font-size: 2rem;
-            margin: 2rem 0;
-            cursor: pointer;
-
-            &:hover{
-                transform: rotate(-2deg) scale(1.1);
-            }
         }
+    }
+}
+
+#banner4 {
+    margin: 4rem 3rem 5rem;
+    background: url('../img/oldpaper1.jpg') top right no-repeat;
+    padding: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+    transform: rotate(3deg);
+
+    img{
+        border-radius: 50%;
+        width: 6rem;
+        height: 6rem;
+        margin-top: -3rem;
+        margin-bottom: 1rem;
+        object-fit: cover;
+        object-position: top;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+        border: 0.2rem solid #000;
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+    }
+
+}
+footer {
+        display: block;
+        padding: 10rem;
+}
+
+
+#dialogContainer {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &.hide {
+        display: none;
+    }
+
+    &.fadeIn {
+        animation: fadeIn;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    &.fadeOut {
+        animation: fadeOut;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    #dialog {
+        margin: 2rem 3rem 0;
+        background: url('../img/oldpaper2.jpg') top right no-repeat;
+        padding: 0.5rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+        border-radius: 0.5rem 0.2rem 0.7rem 0.2rem;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            border: 0.2rem solid #000;
+
+            h1 {
+                font-size: 2rem;
+                margin: 0;
+            }
+
+            p{
+                font-size: 1.4rem;
+            }
+            
+        }
+
+
+    }
+}
+
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        display: flex;
+        backdrop-filter: blur(1rem) saturate(0.5);
+
+    }
+
+    99% {
+        opacity: 0;
+        display: flex;
+        backdrop-filter: blur(0) saturate(1);
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+        display: flex;
+        backdrop-filter: blur(0) saturate(1);
+    }
+
+    100% {
+        opacity: 1;
+        backdrop-filter: blur(1rem) saturate(0.5);
+        display: flex;
     }
 }

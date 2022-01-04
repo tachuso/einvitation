@@ -21,7 +21,7 @@ const guestSchema = new schema({
         }
     },
     vaccine: {
-        type: Number,
+        type: String,
         required: true
     }
 })
