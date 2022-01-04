@@ -113,16 +113,24 @@
                 <br>
                 <form action="">
                     <label class="imbue uppercase" for="lastname">Apellido/s:</label>
-                    <input class="hand" type="text" id="lastname" name="lastname" placeholder="ejemplo: Angio">
+                    <input class="hand" type="text" id="lastname" name="lastname" placeholder="ejemplo: Angio" required 
+                    oninvalid="this.setCustomValidity('Debes ingresar un apellido')"
+                    oninput="setCustomValidity('')">
 
                     <label class="imbue uppercase" for="firstname">Nombre/s:</label>
-                    <input class="hand" type="text" id="firstname" name="firstname" placeholder="ejemplo: Eduardo Omar">
+                    <input class="hand" type="text" id="firstname" name="firstname" placeholder="ejemplo: Eduardo Omar" required
+                    oninvalid="this.setCustomValidity('Debes ingresar un nombre')"
+                    oninput="setCustomValidity('')">
 
                     <label class="imbue uppercase" for="email">Email:</label>
-                    <input class="hand" type="email" id="email" name="email" placeholder="ejemplo: omar@box.app">
+                    <input class="hand" type="email" id="email" name="email" placeholder="ejemplo: omar@box.app" required
+                    oninvalid="this.setCustomValidity('Debes ingresar un email válido')"
+                    oninput="setCustomValidity('')">
 
                     <label class="imbue uppercase" for="phone">Teléfono:</label>
-                    <input class="hand" type="tel" id="phone" name="phone" placeholder="ejemplo: 2657505133">
+                    <input class="hand" type="tel" id="phone" name="phone" placeholder="ejemplo: 2657505133" required
+                    oninvalid="this.setCustomValidity('Debes ingresar un teléfono')"
+                    oninput="setCustomValidity('')">
 
                     <p class="imbue uppercase">Esquema de Vacunación COVID:</p>
                     <input type="radio" name="dosis" id="dosis0" value="0">
